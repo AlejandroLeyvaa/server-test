@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "build":
+    {
+      "src": "*index.js",
+      "use": "@vercel/node"
+    },
+  "routes":[
+    {
+      "src": "/",
+      "dest": "/index.js",
+      "methods": ["GET"],
+      "headers": {
+        "Access-Control-Allow-Origin": "_"
+      }
+
+    }
+  ],
+  "env": {
+    "DB_USER": "@dbname",
+    "DB_PASSWORD": "@dbpassword",
+    "DB_HOST": "@dbhost",
+    "DB_NAME": "@dbname"
+  }
+}
